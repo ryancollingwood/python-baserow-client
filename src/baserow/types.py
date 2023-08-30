@@ -58,6 +58,7 @@ class TableField:
   name: str
   order: int
   primary: bool
+  read_only: bool
 
 
 @dataclasses.dataclass
@@ -77,6 +78,5 @@ class Page(t.Generic[T]):
   previous: t.Optional[int]
   next: t.Optional[int]
   results: t.List[T]
-
 
 from . import field_types
